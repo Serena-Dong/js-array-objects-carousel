@@ -46,12 +46,11 @@ const data = [
 
 
 
-//ELEMENTI
-
+//Prendo la galleria
 const gallery = document.querySelector('#carousel .gallery');
 
+//Creo gli elementi
 let cardElement = '';
-
 
 for (let i = 0; i < data.length; i++){
     cardElement += `
@@ -61,5 +60,15 @@ for (let i = 0; i < data.length; i++){
     <p>"${data[i].text}"</p>
     </div>`
 }
-
+//Inserisco in pagina
 gallery.innerHTML= cardElement;
+
+//Recupero gli elementi
+const images = document.querySelectorAll(".gallery img");
+const texts = document.querySelectorAll(".gallery .text");
+
+//Aggiungo active img e il testo
+let currentActiveIndex = 0;
+
+images[currentActiveIndex].classList.add("active")
+texts[currentActiveIndex].classList.add("active")
