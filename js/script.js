@@ -53,11 +53,14 @@ const gallery = document.querySelector('#carousel .gallery');
 let cardElement = '';
 
 for (let i = 0; i < data.length; i++){
+
+    const image = `<img src="${data[i].image}" alt="ciao"></img>`
+
     cardElement += `
-    <img src="${data[i].image}" alt="ciao">
+    ${image}
     <div class="text">
     <h1>"${data[i].title}"</h1>
-    <p>"${data[i].text}"</p>
+    <h3>"${data[i].text}"</h3>
     </div>`
 }
 //Inserisco in pagina
