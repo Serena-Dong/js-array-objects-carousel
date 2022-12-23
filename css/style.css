@@ -31,7 +31,7 @@ body{
 
     display: none;
 }
-.gallery img.active{
+.gallery img.active, .gallery .text.active{
     display: block;
 }
 
