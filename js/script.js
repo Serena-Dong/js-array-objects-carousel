@@ -72,3 +72,34 @@ let currentActiveIndex = 0;
 
 images[currentActiveIndex].classList.add("active")
 texts[currentActiveIndex].classList.add("active")
+
+
+// #BOTTONI
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+
+prev.addEventListener('click', function(){
+    
+    images[currentActiveIndex].classList.remove("active")
+    texts[currentActiveIndex].classList.remove("active")
+
+    currentActiveIndex --;
+
+    if (currentActiveIndex < 0) currentActiveIndex = images.length - 1;
+
+    images[currentActiveIndex].classList.add("active")
+    texts[currentActiveIndex].classList.add("active")
+});
+
+next.addEventListener('click', function(){
+    
+    images[currentActiveIndex].classList.remove("active")
+    texts[currentActiveIndex].classList.remove("active")
+
+    currentActiveIndex ++;
+
+    if (currentActiveIndex === images.length) currentActiveIndex = 0;
+
+    images[currentActiveIndex].classList.add("active")
+    texts[currentActiveIndex].classList.add("active")
+});
