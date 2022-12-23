@@ -50,10 +50,16 @@ const data = [
 
 const gallery = document.querySelector('#carousel .gallery');
 
-let imageElement = '';
+let cardElement = '';
+
 
 for (let i = 0; i < data.length; i++){
-    imageElement += `<img src="${data[i].image}" alt="ciao">`;
+    cardElement += `
+    <img src="${data[i].image}" alt="ciao">
+    <div class="text">
+    <h1>"${data[i].title}"</h1>
+    <p>"${data[i].text}"</p>
+    </div>`
 }
 
-gallery.innerHTML= imageElement;
+gallery.innerHTML= cardElement;
